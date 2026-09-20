@@ -5,10 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "webpack serve --mode development",
-    "dev": "vite --port 9000",
     "build": "tsc --noEmit && webpack --mode production",
-    "build:vite": "tsc && vite build",
-    "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write .",
     "test": "tsx node_modules/mocha/bin/mocha.js \"tests/**/*.test.ts\"",
@@ -40,7 +37,6 @@
     "tsx": "^4.20.5",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.44.0",
-    "vite": "^8.1.5",
     "webpack": "^5.101.3",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
