@@ -4,14 +4,16 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "webpack serve --mode development",
-    "build": "tsc --noEmit && webpack --mode production",
+    "start": "vite --port 9000",
+    "build": "tsc --noEmit && vite build",
     "lint": "eslint .",
     "format": "prettier --write .",
     "test": "tsx node_modules/mocha/bin/mocha.js \"tests/**/*.test.ts\"",
     "prepare": "husky",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "dev": "vite --port 9000",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
@@ -23,22 +25,15 @@
     "@types/chai": "^5.2.2",
     "@types/mocha": "^10.0.10",
     "chai": "^5.3.3",
-    "css-loader": "^7.1.2",
     "eslint": "^9.36.0",
     "gh-pages": "^6.3.0",
-    "html-webpack-plugin": "^5.6.4",
     "husky": "^9.1.7",
     "mocha": "^11.7.2",
     "prettier": "^3.9.5",
     "sass": "^1.92.1",
-    "sass-loader": "^16.0.5",
-    "style-loader": "^4.0.0",
-    "ts-loader": "^9.5.4",
     "tsx": "^4.20.5",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.44.0",
-    "webpack": "^5.101.3",
-    "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.2"
+    "vite": "^8.3.0"
   }
 }
